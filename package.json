@@ -1,0 +1,35 @@
+{
+  "name": "testnpm",
+  "version": "1.0.0",
+  "description": "just some text",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiomars93/testNPM.git"
+  },
+  "keywords": [
+    "Test",
+    "NPM"
+  ],
+  "author": "MeltAuthor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiomars93/testNPM/issues"
+  },
+  "homepage": "https://github.com/Kiomars93/testNPM#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
